@@ -139,11 +139,11 @@ print_colored proc         ; chon mau cho ki tu in ra(nhung ko in)
     jmp print_common
 
 print_x:
-    mov bl, 0Ch ; –o s·ng
+    mov bl, 0Ch ; √êo s√°ng
     jmp print_common
 
 print_o:
-    mov bl, 0Ah ; Xanh l· s·ng
+    mov bl, 0Ah ; Xanh l√° s√°ng
 
 print_common:
     push cx
@@ -156,7 +156,7 @@ print_common:
 print_colored endp
 ;-----------------------------------------------------
 player_turn proc
-    ; ThÙng b·o luot choi
+    ; Th√¥ng b√°o luot choi
 ms_turn:
     call clear_screen
     call draw_board
@@ -277,7 +277,7 @@ check_col3:
     jne check_diag1
     call win_game
 
-; kt duong chÈo
+; kt duong ch√©o
 check_diag1:
     lea si, board
     mov al, [si]
@@ -320,7 +320,7 @@ win_game proc
     call clear_screen
     call draw_board
     pop bx
-    ; ThÙng b·o win
+    ; Th√¥ng b√°o win
     mov dh, 14
     mov dl, 33
     call move_cursor
@@ -343,7 +343,7 @@ draw_game:
     call clear_screen
     call draw_board
 
-    ; ThÙng b·o hÚa
+    ; Th√¥ng b√°o h√≤a
     mov dh, 14
     mov dl, 33
     call move_cursor
